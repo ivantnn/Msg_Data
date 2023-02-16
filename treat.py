@@ -8,7 +8,7 @@ import plotly.express as px
 #Import the dataset
 df = pd.read_csv('msgs.csv')
 def Qui(name,df):
-    if name =='Celine':
+    if name =='C':
         df=df.loc[df['Qui']=='C']
         hist1 = 'indianred'
     else:
@@ -22,7 +22,7 @@ st.set_page_config(page_title = 'Message Exchange', page_icon=":warning:",layout
 #---------ZERO SECTION: INTRO
 st.title(':arrow_down_small: Conversation Data')
 st.header('> Person: ')
-choice = st.selectbox("Choose the person",["Celine","Ivan"])
+choice = st.selectbox("Choose the person",["C","I"])
 
 df,hist1 = Qui(choice,df)
 
